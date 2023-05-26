@@ -4,10 +4,27 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './Components/NavBar/NavBar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 function App() {
   return (<div >
+    <BrowserRouter> 
+
+
       <NavBar /> 
-      <ItemListContainer greeting={'Bienvenidos a tu lugar en el mundo de la computacion'}/>
+
+      <Routes>
+        <Route path='/' element ={<ItemListContainer/>} />
+        <Route path='/category/:categoryId' element ={<ItemListContainer/>} />
+        <Route path='/item/:itemId' element ={<ItemDetailContainer/>} />
+        <Route path='*' element = {<h1>404 NOT FOUND</h1>
+        } />
+      </Routes>
+
+      
+
+      </BrowserRouter>
   </div>)
   
 }
