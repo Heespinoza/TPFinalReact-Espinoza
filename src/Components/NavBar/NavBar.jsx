@@ -15,9 +15,9 @@ const NavBar= () => {
             <li><NavLink to={`/category/Mother`} >Mother</NavLink></li>
             <li><NavLink to={`/category/Graficas`} >Graficas</NavLink></li>
             <li><NavLink to={`/category/Almacenamiento`} >Almacenamiento</NavLink></li>
-            <li><NavLink to={`/category/Componente`} >Componentes</NavLink></li>
-            <li><NavLink to={`/category/Periférico`} >Periféricos</NavLink></li>
-            <li> <Link to="">  <CardWidget /> </Link> </li>
+            <li><NavLink to={`/category/Componente`} >Componente</NavLink></li>
+            <li><NavLink to={`/category/Periferico`} >Periferico</NavLink></li>
+            <li>   <CardWidget />  </li>
         </ul>
        
     </nav>

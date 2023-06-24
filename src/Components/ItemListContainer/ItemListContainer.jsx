@@ -1,28 +1,45 @@
 import './ItemListContainer.css'
 import { useState, useEffect } from 'react';
-import { getproducts } from '../ListaProductos';
+
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import { db } from '../../Firebase/Firebasedb';
+import { collection, where, query, getDocs } from 'firebase/firestore';
 
 const ItemListContainer = ({greeting}) =>{
     const [productos, setProducts] = useState ([])
+    const [loading, setLoading] = useState(true)
+
     const {categoryId} = useParams()
-    console.log (categoryId)
+     
+    
     useEffect(()=> {
+        setLoading(true)
+         const collectionRef = categoryId
+       
+        ? query(collection(db, 'productos'), where('tipo','==',categoryId))
+        : collection(db,'productos')
         
         
-        getproducts().then(response=>{
-            if(categoryId){
-                const FilterProduct= response.filter(prod => prod.tipo === categoryId);
+        getDocs(collectionRef).then(response=>{
+            
+                const FilterProduct= response.docs.map(doc =>{
+                    const data = doc.data()
+                    return{id: doc.id, ...data}
+                })
                 setProducts(FilterProduct);
 
-            }else{
-            setProducts(response)
-        }
+            
+            
+        
         } )
         .catch(error=>{
             console.error(error)
         })
+        .finally(() => {
+            setLoading(false)
+        }
+        )
     }, [categoryId])
     return (
         <div>
