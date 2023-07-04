@@ -1,9 +1,9 @@
 import './ItemDetailContainer.css'
 import { useState ,useEffect, useContext } from 'react'
-import { getproductById } from '../ListaProductos'
+
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-import { cartContext } from '../../Context/CartContext'
+
 import { db } from '../../Firebase/Firebasedb'
 import { getDoc, doc } from 'firebase/firestore'
 
