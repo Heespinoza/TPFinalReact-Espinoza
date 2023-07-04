@@ -4,7 +4,7 @@ import './NavBar.css'
 import { Link, NavLink } from "react-router-dom";
 const NavBar= () => {
     return (
-    <nav>
+    <nav className="navbar">
         
         <ul>
             <li ><Link to="/"> <h4>RAM COMPUTACION</h4></Link>

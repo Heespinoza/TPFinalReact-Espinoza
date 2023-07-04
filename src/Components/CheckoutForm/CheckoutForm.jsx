@@ -1,4 +1,6 @@
 import { useState } from "react";
+import './CheckoutForm.css';
+
 export default function CheckoutForm({ onConfirm }) {
     const [userData, setUserData] = useState({
       nombre: "",
@@ -34,8 +36,9 @@ export default function CheckoutForm({ onConfirm }) {
     const label = { width: "100px", marginRight: 4 };
   
     return (
-      <form className="checkout-container" onSubmit={onSubmit}>
-        <h1>Ingresa tus datos para completar la compra 🛍</h1>
+      <div className="container">
+      <form className=" formulario" onSubmit={onSubmit}>
+        <h1 >Ingresa tus datos para completar la compra</h1>
         <div style={styleInput}>
           <label style={label}>Nombre</label>
           <input
@@ -65,8 +68,9 @@ export default function CheckoutForm({ onConfirm }) {
         </div>
         <button>Crear orden</button>
         <button onClick={handleReset}>Vaciar</button>
-      </form>
+      </form></div>
     );
+    
   }
 
   

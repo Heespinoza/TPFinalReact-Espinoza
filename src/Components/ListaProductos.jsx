@@ -74,7 +74,7 @@ const productos = [
     {
       id: '9',
       nombre: 'Procesador',
-    descripcion: 'Procesador de 6 núcleos y 12 hilos',
+      descripcion: 'Procesador de 6 núcleos y 12 hilos',
       precio: 299.99,
       stock: 5,
       tipo: 'Procesadores',

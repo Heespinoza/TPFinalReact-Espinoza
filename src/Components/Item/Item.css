@@ -1,12 +1,12 @@
 .card {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 20px;
-    background-color: antiquewhite;
+    background-color: white;
   }
   
   .card-img {
@@ -29,7 +29,7 @@
   .card-price {
     font-size: 16px;
     font-weight: bold;
-    color: #a2cba2;
+    color: #111211;
   }
   
   .card-button {

@@ -34,6 +34,10 @@ export function CartContextProvider({children}){
     const DelCart = () => {
         setCart ([]);
     }
+
+    function removeItem(idDelete) {
+        setCart(cart.filter((prod) => prod.id !== idDelete));
+      }
     return (
         <cartContext.Provider value ={ { 
             cart,
@@ -41,7 +45,8 @@ export function CartContextProvider({children}){
               addItem,
               CantCart,
               PrecioTotal,
-              DelCart
+              DelCart,
+              removeItem
               } }  >
             {children}
         </cartContext.Provider>

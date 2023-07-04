@@ -6,7 +6,7 @@
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 20px;
-    background-color: antiquewhite;
+    background-color: rgb(244, 242, 241);
   }
   
   .card-img {
@@ -19,6 +19,7 @@
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
+    background-color:papayawhip
   }
   
   .card-description {
@@ -29,7 +30,7 @@
   .card-price {
     font-size: 16px;
     font-weight: bold;
-    color: #a2cba2;
+    color: #0a0a0a;
   }
   
   .card-button {
