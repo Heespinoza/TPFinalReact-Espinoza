@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import './Item.css'
-const Item = ({id, nombre,descripcion, precio, stock, tipo, marca}) => {
+const Item = ({id, nombre,descripcion,imagen , precio, stock, tipo, marca}) => {
     return (
         <article className='card'>
             <header className='card-title'>
                 {nombre}
             </header>
-            
+            <img src={imagen} alt={nombre} />
             <section className='card-description'>
                 
                 <p>
